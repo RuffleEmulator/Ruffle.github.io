@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Basic Webpage with Ruffle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        /* Style for the fixed-size box */
+        .box {
+            width: 1280px; /* Fixed width of the box */
+            height: 800px;  /* Fixed height of the box */
+            background-color: #333;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            position: relative;
+        }
+    </style>
+    <!-- Include Ruffle JavaScript library -->
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+
+    <h1>Welcome to My Website with Ruffle</h1>
+    <p>This is a simple HTML document. You can add text, images, and links here.</p>
+    <p>Below is the Flash content displayed using Ruffle.</p>
+
+    <!-- Fixed size 1280px by 800px box for the Ruffle Flash content -->
+    <div class="box">
+        <!-- Embedding the SWF file using Ruffle -->
+        <object type="application/x-shockwave-flash" width="100%" height="100%" data="path/to/yourfile.swf">
+            <!-- If Flash is not supported, Ruffle will show the content -->
+            <param name="movie" value="path/to/yourfile.swf" />
+            <param name="quality" value="high" />
+            <param name="allowScriptAccess" value="sameDomain" />
+            <param name="allowFullScreen" value="true" />
+        </object>
+    </div>
+
+</body>
+</html>
